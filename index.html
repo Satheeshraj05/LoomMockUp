@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup side bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+            <div class="item"><a href="#"><i class='bx bx-home-alt'></i> Home </a></div>
+            <div class="item">
+                <a class="sub-btn"><i class='bx bx-collection'></i> My library<i
+                        class='fas fa-angle-right dropdown'></i></a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item">Create an account</a>
+
+                    <div class="item">
+                        <a class="sub-btn">Download Loom<i class='fas fa-angle-right dropdown'></i> </a>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-item subcat">Install the Chrome extension to record from your browser
+                                and to unlock integration like Gmail and Jira. <br> 
+                                <a href="#" class="sub-btn"><i class='bx bxl-chrome' style='color:#ffffff'  >Install Chrome Extension</i></a></a>
+                                
+                                
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <a class="sub-btn">Record a video<i class='fas fa-angle-right dropdown'></i> </a>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-item subcat">Record a short video to share with your teammates. Try
+                                introducing yourself or replacing a meeting  <br>
+                                <a href="#" class="sub-btn"><i class='bx bx-video' >Start Recording </i></a></a>
+                                
+                        </div>
+                    </div>
+
+                    <a href="#" class="sub-item">Share your video</a>
+                    <a href="#" class="sub-item">Get a view</a>
+                    <a href="#" class="sub-item">Invite a teammate</a>
+                </div>
+            </div>
+            <div class="item"><a href="#"><i class='bx bxs-bell'></i> Notification</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class='bx bxs-stopwatch'></i> Watch later<i
+                        class='fas fa-angle-right dropdown'></i> </a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item">Watch video</a>
+                    <a href="#" class="sub-item">Save for later</a>
+                </div>
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-desktop"></i> History</a></div>
+            <div class="item"><a href="#"><i class='bx bx-cog'></i> Settings</a></div>
+        </div>
+    </div>
+    <section class="main">
+        <h1>Loom</h1>
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // toggle for sub menus
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+
+
+            //expand and collapse for sidebar
+            $('.menu-btn').click(function () {
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css('visibility', 'hidden');
+            });
+
+            $('.close-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css('visibility', 'visible');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
